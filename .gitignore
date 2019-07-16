@@ -1,6 +1,9 @@
-# dependencies
+# npm modules and related files
 node_modules/
 package-lock.json
 
-dist/css/
-dist/img/*.jpg
+# static generated assets
+dist/
+
+# debug
+reports/
