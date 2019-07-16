@@ -1,5 +1,20 @@
 //- -----------------------------------------------------------------------------
 //- This file contains all markup related to the generic full-page webpage of the site/application.
-//- The intention is to construct a generic webpage with a navbar, content, footer.
 //- No page flow.
 //- -----------------------------------------------------------------------------
+
+include ../abstracts/variables
+include ../abstracts/mixins
+include layout/head
+
+block localVariables
+
+doctype html
+html(lang='en')
+  +head(globalHeadProps, localHeadProps)
+  body.full-page
+    block content
+    block scripts
+      if scriptPaths
+        each scriptPath in scriptPaths
+          script(src=scriptPath type='text/javascript')
