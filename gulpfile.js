@@ -5,7 +5,6 @@ function prefix() {
   return (
     gulp.src(['src/*.css'])
       .pipe(autoprefixer({
-        browsers: ['last 2 versions'],
         cascade: false
       }))
       .pipe(gulp.dest('dist/css/'))
